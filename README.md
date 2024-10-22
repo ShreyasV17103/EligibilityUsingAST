@@ -2,7 +2,7 @@
 
 This application is a simple 3-tier rule engine that determines user eligibility based on attributes like age, department, income, spend, etc. It uses Abstract Syntax Trees (AST) to represent conditional rules and allows for dynamic creation, combination, and modification of these rules.
 
-## Architecture
+ Architecture
 
 The application is divided into three tiers:
 
@@ -22,7 +22,17 @@ The application is divided into three tiers:
 
 3. Data Layer
    - Stores rules and application metadata
-   - Utilizes PostgreSQL for persistent storage
+4. Json file
+   - Create a json file giving data such as experience, salary, age , department
+  
+Dependences
+rule_engine
+
+command Prompt
+-- pip install rule_engine
+
+command prompt 
+pip install flask
 
 Data Structure
 
@@ -35,7 +45,6 @@ class Node:
         self.left = left  # Reference to left child
         self.right = right  # Reference to right child (for operators)
         self.value = value  # Optional value for operand nodes
-
 
 
 
